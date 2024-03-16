@@ -1,0 +1,16 @@
+SELECT * 
+FROM unidb.classroom 
+ORDER BY classroomid ASC
+
+SELECT * 
+FROM unidb.classroom 
+WHERE seats >= {num_seats} 
+ORDER BY classroomid ASC
+
+SELECT type, count(classroomid)
+FROM unidb.classroom
+GROUP BY type
+ORDER BY count(classroomid) desc
+
+INSERT into unidb.classroom
+VALUES ({name}, {seats}, {type})

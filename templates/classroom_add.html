@@ -1,0 +1,18 @@
+{% include 'top.html' %}
+<div id="content">
+    <div id="container">
+        <h1 class="page-title">New Classroom</h1>
+        <form class="pure-form pure-form-stacked" method="POST" action="{{ url_for('classroom_add') }}">
+            <h2>Enter the class ID</h2>
+            <input type="text" name="classID" required>
+            <h2>Enter the number of seats</h2>
+            <input type="number" name="seats" required>
+            <h2>Enter the class type</h2>
+            <input type="text" name="type" required>
+            <input class="pure-button pure-button-primary" type="submit">
+        </form>
+        
+    </div>
+</div>
+</body>
+</html>
